@@ -1,38 +1,164 @@
-.App {
+:root{
   text-align: center;
+  align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p{
+  margin: 3vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #fcfcfc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(12, 11, 11);
 }
-
-.App-link {
-  color: #61dafb;
+.boton{
+  margin: 0;
 }
+#container{
+  margin-top: 5vh;
+  width: 75vw;
+  font-size: 3vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+input, button{
+  background-color: transparent;
+  color:rgb(4, 11, 17);
+  border: 2px solid rgb(2, 1, 17);
+  border-radius: 7px;
+  display: block;
+  margin-bottom: 1vh;
+  padding: 0.5em;
+  text-align: center;
+  margin: 1vw;
+  display: inline-block;
+}
+#cityName{
+  width: 46vw; 
+}
+img{
+  width: 7vw;
+}
+#temp{
+  font-size: 7vh;
+  margin: 1vh;
+}
+button{
+  width: 30vw;
+}
+#countryCode{
+  width: 14vw;
+}
+#form, .contain{
+  width: 50vw;
+}
+#actTemp{
+  display: flex;
+  width: auto;
+  height: fit-content;
+}
+ #left{
+  border: 2px solid black;
+  display: block;
+ }
+ #otherData, #left{
+  /* height: 40vhvh; */
+  text-align: center;
+  align-items: center;
+ }
+ #left, #actTemp, #form, .contain, .App-header{
+  justify-content: center;
+  align-items: center;
+ }
 
-@keyframes App-logo-spin {
-  from {
+ .spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: rgb(38, 42, 44);
+  animation: spin 1s ease infinite;
+  
+}
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
+  }
+}
+@media (max-width:900px){
+  :root{
+    font-size: medium;
+  }
+  #container{
+    grid-template-columns: 1fr;
+    width: 80vw;
+  }
+  
+  p{
+    margin: 0.5vh 1vh 0.5vh 1vh;
+    font-size: 2.5vh;
+  }
+  
+  #form, .contain{
+    width: 90vw;
+  }
+  #cityName{
+    width:70vw;
+  }
+  .contain{
+    display: flex;
+  }
+  #countryCode{
+    width: 30vw;
+  }
+  button{
+    width: 36vw;
+  }
+  #left{
+    height: fit-content;
+    margin-bottom: 2vh;
+  }
+  img{
+    width: 20vw;
+  }
+}
+@media (max-width:600px){
+  #container{
+    grid-template-columns: 1fr;
+    width: 90vw;
+  }
+  #form, .contain{
+    width: 90vw;
+  }
+  #cityName{
+    width:70vw;
+  }
+  .contain{
+    display: flex;
+
+  }
+  #countryCode{
+    width: 30vw;
+  }
+  button{
+    width: 38vw;
+  }
+  img{
+    width: 18vw;
+  }
+
+}
+@media (max-width:600px){
+  img{
+    width: 30vw;
+  }
+  #temp{
+    font-size: 6vh;
   }
 }
